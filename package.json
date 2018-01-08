@@ -1,0 +1,23 @@
+{
+  "name": "koderunners-website",
+  "version": "1.0.0",
+  "description": "The official website of the koderunners community",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soumik12345/Koderunners-Website.git"
+  },
+  "author": "Soumik Rakshit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soumik12345/Koderunners-Website/issues"
+  },
+  "homepage": "https://github.com/soumik12345/Koderunners-Website#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "hbs": "^4.0.1"
+  }
+}
