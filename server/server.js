@@ -1,6 +1,8 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+const path = require('path');
+const http = require('http');
 
 const port = process.env.PORT || 3000;
 
@@ -26,6 +28,8 @@ app.use(function(req, res, next) {
 //     res.render('maintainance.hbs');
 // });
 
+const publicPath = path.join(__dirname, '../');
+
 // Function to get the current year
 hbs.registerHelper('getCurrentYear', function() {
     return new Date.getFullYear();
@@ -34,6 +38,8 @@ hbs.registerHelper('getCurrentYear', function() {
 hbs.registerHelper('ToUpperCase', function(text) {
     return text.toUpperCase();
 });
+
+app.use('/', express.static(publicPath));
 
 app.get('/', function(req, res) {
     res.render('index.hbs', {
